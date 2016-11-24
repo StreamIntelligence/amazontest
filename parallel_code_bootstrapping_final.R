@@ -3,7 +3,7 @@
 # Comparing the parallel and non parallel programming elapsed time
 # Tested in Windows 10 Desktop OS, R verison 3.2.3 
 # It is also tested in Mac OSX Yosemite version
-
+# Edited by Aya 4:02 PM
 
 # First, we need to make sure that all required packages are installed 
 # install packages: parallel, doParallel
