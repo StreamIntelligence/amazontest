@@ -17,14 +17,14 @@ library(doParallel)
 data(Sonar)
 
 # In AWS Testing, please coordinate with Amir providing the data in csv format 
-# Sonar <- read.csv("Sonar.csv")
+ Sonar <- read.csv("/home/shared/amazontest/Sonar.csv")
 
 # Calculate the number of cores
-no_cores <- detectCores() - 1
+no_cores <- detectCores()
 
 # Initiate cluster
 # cl <- makeCluster(no_cores,type = "PSOCK") # this is for WINDOWS
-cl <- makeCluster(no_cores,type="FORK") # this is for UNIX
+cl <- makeCluster(2,type="FORK") # this is for UNIX
 registerDoParallel(cl)
 
 # Do training to tune mtry parameter with PARALLEL programming
